@@ -1,6 +1,10 @@
 azul = #22BCE0
 gris_oscuro = #444
+gris_texto = #7A7A7A
 naranja = #DD4F24
+
+a
+	color naranja
 
 body
 	background #E8E8E8
@@ -8,12 +12,36 @@ body
 	font-family Arial
 	font-size 16px
 
+footer
+	background naranja
+	bottom 0
+	color rgba(white, 0.5)
+	position absolute
+	text-align center
+	width 100%
+
+	.powered
+		font-size 14px
+		font-weight normal
+
+		strong
+			display block
+
+		.mejor
+			&:before
+			&:after
+				content "-"
+			
+
+
 header
 	background gris_oscuro
+	box-shadow 0 5px 0 rgba(0,0,0,0.2)
 	color white
 	overflow hidden
 	padding 0.5em
 	position relative
+	z-index 1
 
 	.logo
 		border-right 1px solid azul
@@ -79,6 +107,17 @@ header
 nav
 	background azul
 	border-left 15px solid white
+	position relative
+	
+	&:before
+		border-bottom 20px solid transparent
+		border-left 7px solid white
+		border-top 20px solid transparent
+		content ""
+		left 0
+		position absolute
+		top 0
+
 
 	.menu
 		height 40px
@@ -99,9 +138,97 @@ nav
 				padding 0 0.2em
 				text-decoration none
 
-				&:before
-					content " - "
+				&:hover
+					background rgba(black,0.1)
 
+.posts
+	padding 0.5em
+
+	.post
+		background white
+		color gris_texto
+		box-shadow 2px 2px 10px rgba(black, 0.5)
+		border-radius 0 0 0.5em 0.5em
+
+		.acciones
+			border-top 3px solid azul
+			padding 0.5em
+			overflow hidden
+
+			.datos
+				float right
+
+				.comentarios
+					background gris_oscuro
+					color white
+					margin 0 1em 0 0 
+					padding 2px 5px
+					text-decoration none
+					border-radius 3px
+					position relative
+
+					&:after
+						border-left 4px solid transparent
+						border-right 4px solid transparent
+						border-top 5px solid gris_oscuro
+						content ""
+						left 18px
+						position absolute
+						top 20px
+						
+					
+				.estrellita
+					text-decoration none
+				
+			.votos
+				float left
+
+				.down
+				.up
+					text-decoration none
+
+				.down
+					color red
+				.up
+					color green
+
+		.descripcion
+			color gris_texto
+
+			.detalles
+				height 160px
+				margin-left 130px
+
+				.autor
+					margin 0.5em 0 2em 0
+
+				.fecha
+					float right
+					margin 0 1em 0 0
+
+				.tag
+					background azul
+					border-radius 0.5em
+					color white
+					padding 0.2em 0.5em
+					text-decoration none
+					text-transform uppercase
+
+				.titulo
+					color gris_oscuro
+					font-size 18px
+					font-style italic
+					margin 0
+					padding 0.5em 0.5em 0 0
+
+			.imagen
+				float left
+
+				img
+					height 160px
+					vertical-align top
+					width 120px
+				
 
 
 
